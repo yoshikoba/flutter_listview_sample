@@ -19,15 +19,17 @@ class HomeWidget extends StatefulWidget {
 }
 
 class ListState extends State<HomeWidget> {
+  var listItem = ["one", "two", "three"]; //データ表示用の配列を作成
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("List Test"),),
       body: ListView.builder(
           itemBuilder: (BuildContext context, int index) {
-            return Text(index.toString());
+            return Text(listItem[index]);//listItem内の文字列を表示
           },
-      itemCount: 10,),
+      itemCount: listItem.length,),//listItemの数を渡す
     );
   }
 }
