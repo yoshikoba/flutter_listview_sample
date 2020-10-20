@@ -7,3 +7,4 @@ A new Flutter practice List View
 1. 一番簡単なListView
 2. リストの数を制限する
 3. Listを配列内の文字列を表示
+4. ListTileを使って見栄えを整える

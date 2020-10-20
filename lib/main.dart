@@ -27,7 +27,21 @@ class ListState extends State<HomeWidget> {
       appBar: AppBar(title: Text("List Test"),),
       body: ListView.builder(
           itemBuilder: (BuildContext context, int index) {
-            return Text(listItem[index]);//listItem内の文字列を表示
+            return Container(
+              decoration: BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(color: Colors.black38),
+                ),
+              ),
+              child: ListTile(
+                leading: const Icon(Icons.flight_land),
+                title: Text('$index'),
+                subtitle: Text(listItem[index].toString()),
+                onTap: (){
+                print("tapped$index");
+                },
+              ),
+            );
           },
       itemCount: listItem.length,),//listItemの数を渡す
     );
