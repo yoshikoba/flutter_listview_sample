@@ -26,7 +26,8 @@ class ListState extends State<HomeWidget> {
       body: ListView.builder(
           itemBuilder: (BuildContext context, int index) {
             return Text(index.toString());
-          }),
+          },
+      itemCount: 10,),
     );
   }
 }
